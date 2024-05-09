@@ -7,11 +7,8 @@
     <title>Smartwatch</title>
 </head>
 <body>
-    <style>
-        body{
-            overflow-x: hidden;
-        }
-        .circle-cover{
+<style>
+ .circle-cover{
             height: 85px;
             width: 85px;
             border : 8px solid white;
@@ -28,284 +25,270 @@
             align-items: center;
             color: orangered;
         }
-        .welcover{
-            position: relative;
-        }
-        .welcome{
-            position: absolute;
-            top: 0;
-            background-image: url("bg.png");
-            background-position: center;
-            background-size: cover;
-            filter: blur(8px);
-        }
-        .overlay{
-            position: absolute;
-            top: 0;
-            z-index: 6;
-        }
-        .popInfo{
-            display: none;
-            position:absolute;
-            top: 10%;
-        }
-     .NomNote,.popNote, .mNote, .mailNote, .AdressNote, .villeNote, .codeNote,    .ville, .code, .box, .A_mail, .adress, .payment, .success,.mark1, .mark2{
-            display: none;
-        }
-       
-        @media (max-width : 900px) {
-            .popInfo{
-            display: none;
-            position: fixed;
-            top: 26%;
-        }
-        }
-    </style>
+.upper{
+    background-image: url("bg.png");
+    background-size: cover;  
+     filter: blur(4px); /* Adjust the blur amount as needed */
+     -webkit-backdrop-filter: blur(10px); 
+}
+</style>
 
-     <div class="welcover">
-    <div  class="h-screen welcome w-screen overflow-hidden">
+<div class="whole">
+    <div class="upper absolute top-0 w-screen h-screen  backdrop-blur-md  -z-10">
     </div>
-    <div class="overlay h-screen flex flex-col gap-3 justify-center align-center w-full">
-        <div  class="mx-auto w-fit md:w-1/3">
-            <img src="offf.png" class="h-10 md:h-10 hidden md:block" />
-            <img src="excl.png" class="h-16 md:h-10 md:hidden" />
+    <div class="mainfraim   h-screen w-screen relative flex flex-col pt-20 md:pt-20 align-middle   text-center ">
+        <div class="w-1/2 md:w-1/3 mx-auto">
+            <img src="offf.png" />
         </div>
-        <span class="font-semibold text-sm mx-auto ">Recevez votre Smartwatch</span>
-        <div  class="h-fit md:h-1/2 mx-auto   w-fit">
-            <img src="pod.png" class="h-72 z-10" />
+            <div class=" md:w-1/3 mx-auto mt-4">
+            <img src="pod.png" class="h-80 mx-auto" />
         </div>
-        <div  class="mx-auto -mt-10  md:-mt-20  w-fit">
-            <img src="Frame.png" class="h-20 w-20 ml-52 -mt-10" />
+         <div class="w-1/2 lg:w-1/4 mx-auto -mt-20">
+            <img src="Frame.png" class="h-20 ml-auto lg:mr-4" />
         </div>
-        <button class="py-4 px-20 w-fit text-white  rounded-md md:rounded-lg mx-auto bg-yellow-600	 start">JE CRAQUE</button> <br/>
- 
+        <div class="start bg-yellow-400 rounded-lg drop-shadow-lg mx-auto mt-3 text-white w-1/2 lg:w-1/4 py-3">
+                JE CRAQUE
         </div>
-   </div>
-
-   <!-- POP INFORMATION -->
-
-    <div class="popInfo h-fit overflow-x:hidden w-5/6 md:mt-5 z-50 h-fit
-    mx-10  md:mx-[25%] justify-center rounded-xl md:w-fit md:max-w-2/3 shadow-lg
-    justify-center align-center shadow-lg md:shadow-none bg-white pb-4">
-    <div class="circle-cover absolute -mt-10 ml-[40%] border-8 border-white  ">
+        <span class="mx-auto mt-2">Recevez votre Smartwatch</span>
+</div>
+<div class="hidden popStart bg-white pt-20 lg:pt-0 lg:relative lg:bg-transparent rounded-lg drop-shadow-lg p-4 w-5/6 
+ mt-10 mt-32 flex flex-col md:flex-row lg:w-1/2 lg:gap-12 ml-10 lg:mx-auto">
+   <div class="circle-cover absolute -top-10 ml-[30%] border-8 border-white lg:hidden  ">
         <div class="inner-cover font-semibold text-sm">
         </div> 
      </div>
-
-     <div class="cancel w-fit mt-4 ml-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x mr-4" viewBox="0 0 16 16">
+   <div class="flex flex-col lg:w-1/2">
+    <div class="w-2/3 lg:w-fit mx-auto">
+        <img src="offf.png"  class="hidden lg:block"/>
+        <img src="ex.png" class=" lg:hidden" />
+    </div>
+    <div class="w-fit mx-auto lg:mx-1">
+                Recevez votre Smartwatch
+    </div>
+    <div class="mx-auto lg:mr-auto">
+        <img src="pod.png" class="h-32 lg:h-60"/>
+    </div>
+     <div class="w-1/2 lg:w-1/4 ml-auto mr-12 -mt-16">
+        <img src="Frame.png" class="h-16 md:h-20 ml-auto lg:mr-4" />
+    </div>
+   </div>
+   <div class="inputList relative lg:hidden mx-auto w-5/6 mt-4">
+   
+    <div class="w-fit h-fit absolute top-10 right-6 close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
           </svg>
     </div>
-<div class="flex flex-col w-fit mx-auto md:flex-row justify-center align-center gap-6">
+    <span>Remplissez voz cordonnes</span>
+    <div class="mError text-red-500 text-xs hidden">Merci de remplir ce champ obligatoire</div>
+ <div class="flex w-">
+    <input type="text" placeholder="Nom de famille"
+     required class="mFamille w-3/4 rounded-l-lg px-4 outline-none bg-gray-50" />
+     
+    <input type="text" placeholder="Adress"
+    required class="mAdresse hidden w-3/4 rounded-l-lg px-4 outline-none bg-gray-50" />
     
-   <div class="sideImage  flex flex-col mr-4 h-full
-    gap-1 md:gap-3 justify-end align-center text-center md:text-left ">
-    <span class="font-bold text-sm mx-auto italic">Recevez votre Smartwatch</span>
-    <div  class="md:h-1/2  w-fit mx-auto md:mr-auto ">
-        <img src="pod.png" class="h-56 md:h-80" />
-    </div>
-    <div  class="md:-mt-20  -mt-10 w-fit">
-        <img src="Frame.png" class="h-16 w-16 md:h-20 md:w-20 ml-40 md:ml-52" />
-    </div>
-    </div>
-
-        <div class="desktop_form hidden md:block mt-auto relative h-fit w-72">
-          <div class="circle-cover absolute hidden -mt-16 ml-[35%] border-4 border-white  ">
-       <div class="inner-cover font-semibold text-sm">
-       </div> 
-    </div>
-
-        <div class="cancel w-fit hidden  ml-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x mr-4" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-              </svg>
-        </div>
-        <span class="font-semibold text-xs mx-4">
-            Remplisser vos coordonnees
-        </span>
-        <div class="space-y-3 text-xs mt-3 mx-6">
-            <div>
-                <span class="mb-1 text-xs text-red-500 NomNote">Merci de remplir ce champ obligatoire</span>
-                <input type="text" class="px-6 py-2 bg-gray-100 rounded-md w-full nomDesk"  placeholder="Nom de famille" />
-            </div>
-            <div>
-            <span class="mb-1 text-xs text-red-500 AdressNote">Merci de remplir ce champ obligatoire</span>
-            <input type="text" class="px-6 py-2 bg-gray-100 rounded-md w-full AdressDesk"  placeholder="Adress" />
-            </div>
-            <div class="flex justify-between w-full">
-                <div class="w-1/3">
-            <span class="mb-1 text-xs text-red-500 villeNote"> Obligatoire</span>
-            <input type="text" class="px-6 py-2 bg-gray-100 rounded-md w-full villeDesk"  placeholder="Ville" />
-                </div>
-                <div class="w-1/2">
-                    <span class="mb-1 text-xs text-red-500 codeNote"> Obligatoire</span>
-                    <input type="number" class="px-6 py-2 bg-gray-100 rounded-md w-full codeDesk"  placeholder="Code Portal" />
-                        </div>
-            </div>
-            <div>
-                <span class="mb-1 text-xs text-red-500 mailNote">Merci de remplir ce champ obligatoire</span>
-                <input type="text" class="px-6 py-2 bg-gray-100 rounded-md w-full mailDesk"  placeholder="Adress email" />
-            </div>
-            <div class="text-xs">
-                <input type="checkbox" /> J'ais plus de 18 ans et j'acceptes les conditions
-            </div>
-        </div>
-        <div class="bg-amber-600 text-white w-fit mx-auto px-12 py-2 rounded-md mt-4 send">SEND</div>
-    </div>
-
-    <div class="md:hidden flex flex-col mx-auto pb-3 form">
-        <div>Remplisser vos coordonnees</div>
-
-        <div>
-            <span class="text-red-500 font-semibold text-xs mNote">Merci de remplir ce champ obligatoire</span>
-            <div class="flex bg-gray-100 justify-between mt-1 rounded-lg">
-                <div>
-                    <input type="text" class="pl-3 bg-gray-100 mt-2 famille outline-none" placeholder="Nom de famille"/>
-                    <input type="text" class="pl-3 bg-gray-100 mt-2 adress outline-none" placeholder="Address"/>
-                    <input type="text" class="pl-3 bg-gray-100 mt-2 ville outline-none" placeholder="Ville"/>
-                    <input type="number" class="pl-3 bg-gray-100 mt-2 code outline-none" placeholder="Code Portal"/>
-                    <input type="text" class="pl-3 bg-gray-100 mt-2 A_mail outline-none" placeholder="Adress email"/>
-                </div>
-                <button class="bg-amber-600 px-4 py-3 rounded-lg mobNext"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg></button>
-            </div>
-        </div>
-        <div class="text-xs box  mt-3 w-5/6 mx-auto">
-            <input type="checkbox" /> J'ais plus de 18 ans et j'acceptes les conditions
-        </div>
-    </div>
+    <input type="text" placeholder="Ville"
+     required class="mVille hidden w-3/4 rounded-l-lg px-4 outline-none bg-gray-50" />
+     
+    <input type="text" placeholder="Code de Portal"
+    required class="mCode w-3/4 hidden rounded-l-lg px-4 outline-none bg-gray-50" />
     
-    <form class="payment w-72  bg-white mt-auto pt-6 relative mx-auto rounded-md ">
+    <input type="text" placeholder="Adress Email"
+     required class="mEmail hidden w-3/4 rounded-l-lg px-4 outline-none bg-gray-50" />
 
-        <span class="font-semibold text-sm ml-4">Information de paiement</span>
-    <div class="space-y-4 text-xs mt-4 mx-4">
-        <div class="w-full px-6 py-2 bg-gray-100 rounded-md">
-            <input type="text" class="bg-gray-100 cardDigit outline-none"  placeholder="1234 1234 1234 1234" maxlength="19" oninput="formatCardNumber(event)" required />
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-credit-card -mt-4 ml-auto mr-4" viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
-                <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
-              </svg>
+    <div class="bg-yellow-400 py-3 px-4 rounded-r-lg forNext"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+        fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+      </svg></div>
+ </div>
+   </div>
+   <div class="hidden inputLg lg:block bg-white w-1/2  relative rounded-lg h-fit">
+     <div class="circle-cover absolute -mt-10 ml-[40%] border-8 border-white  ">
+        <div class="inner-cover font-semibold text-sm">
+        </div> 
+     </div>
+     <div class="w-fit h-fit absolute top-10 right-6 close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+          </svg>
+    </div>
+        <div class="ml-3 mt-20">Remplissez votre cordinnes</div>
+        <div class="flex flex-col space-y-3 mx-3">
+            <span class="text-xs text-red-500 fi hidden" >Merci de remplir ce champ obligatoire</span>
+            <input type="text" class="famille w-full rounded-lg bg-gray-100 px-3 text-sm py-2" placeholder="Nom de famille"/>
+            
+            <span class="text-xs text-red-500 sec hidden" >Merci de remplir ce champ obligatoire</span>
+            <input type="text" class="Adresse w-full rounded-lg bg-gray-100 px-3 text-sm py-2" placeholder="Adresse"/>
+           
+            <span class="text-xs text-red-500 thi hidden" >Merci de remplir ce champ obligatoire</span>
+            <div class="flex justify-between">
+                <input type="text" class="Ville w-1/3 rounded-lg bg-gray-100 px-3 text-sm py-2" placeholder="ville"  />
+                <input type="text" class="Code w-1/2 rounded-lg bg-gray-100 px-3 text-sm py-2" placeholder="code de Portal"  />
+            </div>
+            
+            <span class="text-xs text-red-500 fout hidden" >Merci de remplir ce champ obligatoire</span>
+            <input type="text" class="Mail w-full rounded-lg bg-gray-100 px-3 text-sm py-2" placeholder="Nom de famille"/>
+            <div class="flex text-xs">
+                <input type="checkbox">
+                <div class="ml-2">je plus de 18 ans et j'accepte les conditions</div>
+            </div>
         </div>
-            <div class="flex justify-between w-full">
-                <input type="text" class="px-6 py-2 bg-gray-100 rounded-md w-1/3 cardDate" maxlength="5"
+        <div class="push py-3 w-full rounded-xl bg-yellow-400 text-white text-center  mt-3 deskSend">SEND</div>
+   </div>
+   <div class="card hidden relative bg-white rounded-lg">
+     <div class="circle-cover absolute hidden lg:block -mt-10 ml-[35%] border-8 border-white  ">
+        <div class="inner-cover font-semibold text-sm">
+        </div> 
+     </div>
+    <div class="w-fit h-fit absolute top-10 right-6 close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+          </svg>
+    </div>
+    <div class="text-sm mx-auto md:ml-3 my-3 w-fit lg:mt-20">Information de paiment</div>
+    
+    <div class="text-sm flex flex-col gap-3 px-3">
+        <div class=" bg-gray-100 flex justify-between rounded-xl">
+            <input type="text" class="w-full rounded-xl py-3 bg-gray-100 px-3 outline-none digit"
+             placeholder="1234 1234 1234 1234" maxlength="19" oninput="formatCardNumber(event)"/>
+          
+        </div>
+        <div class="flex justify-between">
+            <input type="text" class="w-1/3 rounded-xl py-3 bg-gray-100 px-3 text-sm "
+            maxlength="5"
                  oninput="formatCardExpiration(event)"  placeholder="MM/YY" required />
-                <input type="text" class="px-6 py-2 bg-gray-100 rounded-md w-1/2 hidden md:block outline-none  placeholder="CVV" required/>
-                <div class="md:hidden bg-gray-100 rounded-md w-1/2 flex  justify-between  pl-3">
-                    <input type="text" class="bg-gray-100 w-1/2 cvv outline-none" maxlength="3"  placeholder="CVV"        oninput="formatCVV(event)"  required/>
-                    <button class="bg-amber-600 px-4 py-3 rounded-lg mobPay" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                      </svg></button>
-                </div>
-            </div>
-            <div class="text-xs">
-                <input type="checkbox" /> J'acceptes les terms et lets conditions
-            </div> <div class="text-xs">
-                <input type="checkbox" /> J'acceptes le politiques d'utilisation et de confidentialite
-            </div>
+        <div class="w-1/2 lg:w-fit gap-3 rounded-xl outline-none bg-gray-100 flex justify-between">
+            <input type="text" class=" py-3 outline-none rounded-xl w-1/2  bg-gray-100 px-3 " 
+            maxlength="3"  placeholder="CVV"        oninput="formatCVV(event)" />
+            <img src="info-circle.svg" class="h-5 mt-3 mr-3"  />
         </div>
-        
-        <button class="bg-amber-500	 text-white w-fit px-16 mx-auto py-2 rounded-md mt-8 pay hidden md:block" type="submit">PAY NOW</button>
-    </form>
-
-        <div class="success text-center">
-            <div>
-                <div class=" h-90    relative mt-5">
-                    <img src="pod.png" class="w-72" />
-                    <img src="mainF.png" class="z-10 absolute top-0 h-[300px] w-[400px]" />
-                </div>
-                <div class="w-48 mx-auto">
-                    <img src="CONFIRMÉ.png" />
-                </div>
-             </div> 
-                
-            <span class="font-semibold text-sm  relative mt-auto w-fit italic mx-auto">Merci de nous avois choisir!</span>
         </div>
-</div>
-<div class="progress pt-10   ml-28 w-fit mx-auto absolute -mb-40  hidden md:block
- flex flex-row">
-    <div class="first_circle border-2 border-white rounded-full h-12 w-12 border-2 bg-green-700 border-gray-300 text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-check2 mx-auto mt-3" viewBox="0 0 16 16">
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
-          </svg>
     </div>
-    <div class="w-16 md:w-32 h-1  mt-6 bg-green-700"></div>
-    <div class="second_circle rounded-full h-12 w-12  border-2 border-white  pl-3 bg-white">
-        <div class="p2 mt-3 ml-2">2</div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-check2 mark1 mt-3" viewBox="0 0 16 16">
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
-          </svg>
+    <div class="gap-3 text-sm hidden lg:flex mt-2  mx-3">
+        <input type="checkbox">
+        <div>
+            j'accepte les <span class="font-semibold">terms et  conditions</span></div>
     </div>
-    <div class="w-16 md:w-32 h-1  mt-6 bg-white secondLine"></div>
-    <div class="third_circle rounded-full h-12 w-12 border-2 border-white  bg-white">
-        <div class="p3 mt-3 ml-4">3</div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-check2 mark2 mx-auto mt-3" viewBox="0 0 16 16">
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
-          </svg>
+    <div class="hidden lg:flex gap-3 text-sm mt-2  mx-3">
+        <input type="checkbox">
+        <div>
+            j'accepte les <span class="font-semibold">Politiques de l'utilisation et des confidentialite</span></div>
     </div>
-</div>
+    <div class="bg-yellow-400  w-11/12 text-center text-white rounded-xl py-3 pay mt-4 mx-auto">
+        PAY NOW
+       </div>
    </div>
 
+</div>
 
+<div class="success   bg-white mb-3 mt-32 md:mt-24 hidden rounded-lg flex-col relative w-5/6 mx-auto lg:w-1/3 p-3 md:p-10">
+    <div class="w-fit h-fit absolute top-10 right-6 close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+          </svg>
+    </div>
+    <div class="hidden lg:block absolute z-30 top-20">
+        <img src="mainF.png" class="" />
+    </div>
 
-<div class="w-3/4 border-2 border-red-400 bg-white
- text-black popNote md:w-90 z-50 absolute ml-[20%] top-[20%] h-fit mx-auto">
-    Notification Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, obcaecati! Facere rerum amet, eligendi sed earum eaque ea magnam, voluptatibus vitae eius corporis laudantium fugiat tempora, doloremque modi possimus? Quae.
+    <div class=" lg:hidden absolute z-30 top-20 right-2">
+        <img src="love.png" class="" />
+    </div>
+    <div class=" lg:hidden absolute z-30 top-40 ">
+        <img src="ok.png" class="" />
+    </div>
+        <div class="w-1/2 mx-auto">
+        <img src="offf.png" class="" />
+    </div>
+    <div class="w-1/2 mx-auto">
+        <img src="CONFIRMÉ.png" class="" />
+    </div>
+        <div class=" mx-auto mt-1">
+        <img src="pod.png" class="h-60 mx-auto" />
+    </div>
+
+    <span class="mx-auto mt-2">Merci de nous avoir chosis!</span>
+</div>
+<div class="hidden progBar  gap-3 w-fit mx-auto justify-center align-middle">
+  <div class="bg-green-800 border-4 border-white rounded-full p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-check" viewBox="0 0 16 16">
+        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+      </svg>
+  </div>
+  <div class="h-1 w-28 bg-green-800 mt-5"></div>
+  <div class="firstP border-2 border-slate-300 text-slate-500 py-2 px-4 rounded-full">
+    2
+  </div>
+  <div class="bg-green-800 border-4 border-white rounded-full p-2 hidden firstM">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-check" viewBox="0 0 16 16">
+        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+      </svg>
+  </div>
+  <div class="h-1 w-28 bg-gray-400 mt-5  line"></div>
+  <div class="secP border-2 border-slate-300 text-slate-500 py-2 px-4 rounded-full">
+    3
+  </div>
+  <div class="bg-green-800 border-4 border-white rounded-full p-2 hidden secM">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-check" viewBox="0 0 16 16">
+        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+      </svg>
+  </div>
+</div>
+
+<div class="gif h-screen w-screen absolute top-0 pt-32 bg-black opacity-85  text-white hidden z-90 pt-3">
+    <img src="load.gif" class="mx-auto h-20"/>
+    <div class="w-1/2 md:w-1/4 mx-auto mt-3 text-center">Veuillez patientez, nous sommes en train des traitez l'information</div>
+</div>
+
 </div>
 
 </body>
 
 <script>
-    const overlay = document.querySelector(".overlay")
+    const mainfraim = document.querySelector(".mainfraim")
+    const mError = document.querySelector(".mError")
+    const gif = document.querySelector(".gif")
+    const fi = document.querySelector(".fi")
+    const sec = document.querySelector(".sec")
+    const thi = document.querySelector(".thi")
+    const fout = document.querySelector(".fout")
+    const start = document.querySelector('.start')
+    const famille= document.querySelector('.famille')
+    const Adress = document.querySelector('.Adresse')
+    const Ville = document.querySelector('.Ville')
+    const Code = document.querySelector('.Code')
+    const Email = document.querySelector('.Mail')
+    const popStart = document.querySelector('.popStart')
+    const mFamille = document.querySelector('.mFamille')
+    const mAdresse = document.querySelector('.mAdresse')
+    const mCode = document.querySelector('.mCode')
+    const mEmail = document.querySelector('.mEmail')
+    const mVille = document.querySelector('.mVille')
+    const forNext = document.querySelector('.forNext')
+    const firstP = document.querySelector('.firstP')
+    const firstM = document.querySelector('.firstM')
+    const deskSend = document.querySelector('.deskSend')
+    const line = document.querySelector('.line')
+    const card = document.querySelector('.card')
+    const inputLg = document.querySelector('.inputLg')
+    const inputList = document.querySelector('.inputList')
+    const pay = document.querySelector('.pay')
+    const digits = document.querySelector('.digits')
+    const success = document.querySelector('.success')
+    const secP = document.querySelector('.secP')
+    const secM = document.querySelector('.secM')
+    const close = document.querySelectorAll('.close')
+    const progBar= document.querySelector('.progBar')
     
-    const progress= document.querySelector(".progress")
-    const popNote = document.querySelector(".popNote")
-    const cancel = document.querySelectorAll(".cancel")
-    const cvv = document.querySelector(".cvv")
-    const cardDate= document.querySelector(".cardDate")
-    const mNote = document.querySelector(".mNote")
-    const nomDesk = document.querySelector(".nomDesk")
-    const cardDigit = document.querySelector(".cardDigit")
-    const digit = document.querySelector(".digit")
-    const NomNote = document.querySelector(".NomNote")
-    const AdressNote =  document.querySelector(".AdressNote")
-    const codeDesk =  document.querySelector(".codeDesk")
-    const AdressDesk =  document.querySelector(".AdressDesk")
-    const villeDesk =  document.querySelector(".villeDesk")
-    const mailDesk =  document.querySelector(".mailDesk")
-    const villeNote =  document.querySelector(".villeNote")
-    const codeNote =  document.querySelector(".codeNote")
-    const mailNote =  document.querySelector(".mailNote")
-    const box = document.querySelector(".box")  
-    const mobPay = document.querySelector(".mobPay") 
-    const form = document.querySelector(".form")
-    const famille = document.querySelector(".famille")
-    const adress = document.querySelector(".adress")
-    const ville= document.querySelector(".ville")
-    const code = document.querySelector(".code")
-    const A_mail = document.querySelector(".A_mail")
-    const mobNext = document.querySelector(".mobNext")
-    const success = document.querySelector(".success")
-    const sideImage = document.querySelector(".sideImage")
-    const send = document.querySelector(".send") 
-    const p2 = document.querySelector(".p2") 
-    const pay = document.querySelector(".pay")
-    const p3 = document.querySelector(".p3") 
-    const mark1= document.querySelector(".mark1") 
-    const mark2 = document.querySelector(".mark2") 
-    const second_circle = document.querySelector(".second_circle")
-    const secondLine = document.querySelector(".secondLine")
-    const third_circle = document.querySelector(".third_circle")
-    const desktop_form = document.querySelector(".desktop_form")
-    const payment = document.querySelector(".payment")
     const timeProgress = document.querySelectorAll(".circle-cover");
-    const popInfo = document.querySelector(".popInfo");
-    const start = document.querySelector(".start");
     const circle_timer = document.querySelectorAll(".inner-cover")
- 
-    let mobileCount = 0;
-    function countdown() {
+    restrictToNumbers(mCode)
+    restrictToNumbers(Code)
+
+    let screenHeight = window.screen.height;
+    let screenWidth = window.screen.width;
+  function countdown() {
     let timeLeft = 150;
     let timer = setInterval(function() {
         let minutes = Math.floor(timeLeft / 60);
@@ -328,122 +311,221 @@
     }, 1000);
 }
 
-    
-
+let count =0;
 start.addEventListener("click", ()=>{
-    popInfo.style.display= "block"
-    overlay.style.display= "none"
-    famille.focus();
+    popStart.style.display= "flex"
+    mainfraim.style.display= "none"
+    mFamille.focus()
+    if(screenHeight <= 820 && screenWidth < 900){
+    popStart.style.transform= "translateY(-110px)"
+    }else if(screenHeight > 820 && screenWidth < 900){
+    popStart.style.transform= "translateY(150px)"
+    }
+    if(screenWidth > 900){
+        progBar.style.display = "flex"
+    }
     countdown();
 })
 
-send.addEventListener("click", ()=>{
-    mark1.style.display= "block"
-    nomDesk.value.length > 2 ? NomNote.style.display="none" : NomNote.style.display="block"
-    AdressDesk.value.length > 2 ? AdressNote.style.display="none" : AdressNote.style.display="block"
-    codeDesk.value.length > 2 ?  codeNote.style.display="none" : codeNote.style.display="block"
-    villeDesk.value.length > 2 ?  villeNote.style.display="none" : villeNote.style.display="block"
-    mailDesk.value.length > 2 ? mailNote.style.display="none" : mailNote.style.display="block"
-    if(nomDesk.value.length >2 && AdressDesk.value.length >2 && codeDesk.value.length > 2 &&
-        villeDesk.value.length > 2 && mailDesk.value.length >2){        
-    payment.style.display = "block"
-    desktop_form.style.display= "none"
-    p2.style.display= "none"
-    mark1.style.display= "block"
-    second_circle.style.background= "rgb(22 163 74)"
-    secondLine.style.background= "rgb(22 163 74)";
+forNext.addEventListener("click", ()=>{
+    if(count == 0){
+        if(mFamille.value.length < 2){
+            mError.style.display = "block"
+            mFamille.focus()
+        }else{
+            mFamille.style.display= "none"
+    mAdresse.style.display= "block"
+    mAdresse.focus()
+    count = count+1;
+    mError.style.display = "none"
         }
+  
+    }else if(count == 1){
+        if(mAdresse.value.length < 2){
+            mError.style.display = "block"
+            mAdresse.focus()
+        }else{
+            mAdresse.style.display= "none"
+    mVille.style.display= "block"
+    mVille.focus()
+    count++;
+    mError.style.display = "none"
+        }
+    }else    if(count == 2){
+        if(mVille.value.length < 2){
+            mError.style.display = "block"
+            mVille.focus()
+        }else{
+      mVille.style.display= "none"
+    mCode.style.display= "block"
+    mCode.focus()
+    count++;
+    mError.style.display = "none"
+        }
+    }else if(count == 3){
+        if(mCode.value.length < 2){
+            mError.style.display = "block"
+            mCode.focus()
+        }else{
+            mCode.style.display= "none"
+    mEmail.style.display= "block"
+    mEmail.focus()
+    count++;
+    mError.style.display = "none"
+        }
+       
+    }else if(count == 4){
+        if(mEmail.value.length < 2){
+            mError.style.display = "block"
+            mEmail.focus()
+        }else{
+            inputList.style.display= "none"
+    card.style.display= "block"
+    digits.focus()      
+    if(screenHeight <= 820 && screenWidth < 900){
+    popStart.style.transform= "translateY(-80px)"
+    }else if(screenHeight > 820 && screenWidth < 900){
+    popStart.style.transform= "translateY(150px)"
+    }}  }
+})
+deskSend.addEventListener("click", ()=>{
+  famille.value.length > 2 ? fi.style.display = "none" : fi.style.display = "block" 
+  Adress.value.length > 2 ? sec.style.display = "none" : sec.style.display = "block" 
+  Ville.value.length > 2 && Code.value.length > 2 ? thi.style.display = "none" : thi.style.display = "block"  
+  Email.value.length > 2 ? fout.style.display = "none" : fout.style.display = "block" 
+if(famille.value.length > 2 && Adress.value.length > 2 && Code.value.length > 2 && Ville.value.length > 2 && Email.value.length > 2){
+    firstP.style.display= "none"
+    inputLg.style.display= "none"
+    card.style.display= "block"
+    firstM.style.display= "block"
+    line.style.background = "green"
+    digits.focus()
+}
+})
+pay.addEventListener("click", ()=>{
+    gif.style.display = "block"
+    setTimeout(myFunction, 2000);
 })
 
-pay.addEventListener("click", (e)=>{
-    // e.preventDefault();
-    third_circle.style.background= "rgb(22 163 74)"
-    payment.style.display = "none"
-    sideImage.style.display = "none"
-    popInfo.style.marginLeft = "40%";
-    popInfo.style.padding = "5px 20px"
-    p3.style.display= "none"
-    mark2.style.display= "block"
-    success.style.display = "block"
-    progress.style.marginLeft = "-10%"
-    circle_timer.style.marginLeft = "20%"
-    // if(nomDesk.value.length >2 && AdressDesk.value.length >2 && codeDesk.value.length > 2){        
-    // payment.style.display = "block"
-    // desktop_form.style.display= "none"
-    //     }
-})
-
-mobNext.addEventListener("click", ()=>{
-    famille.focus()
-    if(mobileCount == 0){
-        function forward(){
-        famille.style.display = "none"
-        adress.style.display = "block"
-        adress.focus();
-        mNote.style.display = "none"
-        mobileCount++
-        }
-        famille.value.length > 2 ?  forward()  :  mNote.style.display = "block" 
-        
-    }else if(mobileCount == 1){
-        function forward(){
-        adress.style.display = "none"
-        ville.style.display = "block"
-        ville.focus();
-        mobileCount++
-        mNote.style.display = "none"
-        }
-        adress.value.length > 2 ?  forward()  :  mNote.style.display = "block" 
-    }else if(mobileCount == 2){
-        function forward(){
-        ville.style.display = "none"
-        code.style.display = "block"
-        code.focus();
-        mobileCount++
-        mNote.style.display = "none"
-        }
-        adress.value.length > 2 ?  forward()  :  mNote.style.display = "block" 
-    }else if(mobileCount == 3){
-        function forward(){
-        code.style.display = "none"
-        A_mail.style.display = "block"
-        popInfo.style.top = "20%"
-        box.style.display = "block"
-        A_mail.focus();
-        mobileCount++
-        mNote.style.display = "none"
-        }
-        code.value.length > 2 ?  forward()  :  mNote.style.display = "block" 
-        
+document.addEventListener('keydown', (event) =>{
+  if (event.keyCode === 13) {
+    if(screenWidth > 1200){
+          famille.value.length > 2 ? fi.style.display = "none" : fi.style.display = "block" 
+  Adress.value.length > 2 ? sec.style.display = "none" : sec.style.display = "block" 
+  Ville.value.length > 2 && Code.value.length > 2 ? thi.style.display = "none" : thi.style.display = "block"  
+  Email.value.length > 2 ? fout.style.display = "none" : fout.style.display = "block" 
+if(famille.value.length > 2 && Adress.value.length > 2 && Code.value.length > 2 && Ville.value.length > 2 && Email.value.length > 2){
+    firstP.style.display= "none"
+    inputLg.style.display= "none"
+    card.style.display= "block"
+    firstM.style.display= "block"
+    line.style.background = "green"
+    digits.focus()
+}
     }else{
-        function forward(){
-        form.style.display = "none"
-        payment.style.display = "block"
-        cardDigit.focus()
-        mNote.style.display = "none"
-        popInfo.style.top = "15%"
+if(count == 0){
+        if(mFamille.value.length < 2){
+            mError.style.display = "block"
+            mFamille.focus()
+        }else{
+            mFamille.style.display= "none"
+    mAdresse.style.display= "block"
+    mAdresse.focus()
+    count = count+1;
+    mError.style.display = "none"
         }
-        A_mail.value.length > 2 ?  forward()  :  mNote.style.display = "block" 
-        
+  
+    }else if(count == 1){
+        if(mAdresse.value.length < 2){
+            mError.style.display = "block"
+            mAdresse.focus()
+        }else{
+            mAdresse.style.display= "none"
+    mVille.style.display= "block"
+    mVille.focus()
+    count++;
+    mError.style.display = "none"
+        }
+    }else    if(count == 2){
+        if(mVille.value.length < 2){
+            mError.style.display = "block"
+            mVille.focus()
+        }else{
+      mVille.style.display= "none"
+    mCode.style.display= "block"
+    mCode.focus()
+    count++;
+    mError.style.display = "none"
+        }
+    }else if(count == 3){
+        if(mCode.value.length < 2){
+            mError.style.display = "block"
+            mCode.focus()
+        }else{
+            mCode.style.display= "none"
+    mEmail.style.display= "block"
+    mEmail.focus()
+    count++;
+    mError.style.display = "none"
+        }
+       
+    }else if(count == 4){
+        if(mEmail.value.length < 2){
+            mError.style.display = "block"
+            mEmail.focus()
+        }else{
+            inputList.style.display= "none"
+    card.style.display= "block"
+    digits.focus()      
+    if(screenHeight <= 820 && screenWidth < 900){
+    popStart.style.transform= "translateY(-80px)"
+    }else if(screenHeight > 820 && screenWidth < 900){
+    popStart.style.transform= "translateY(150px)"
+    }}  }
+
+ 
     }
+  }
+});
+
+
+close.forEach((cl)=>{
+    cl.addEventListener("click", ()=>{
+        success.style.display = "none";
+        popStart.style.display = "none"
+        mainfraim.style.display = "flex"
+         if(screenWidth > 900){
+        progBar.style.display = "none"
+    }
+    })
 })
 
-mobPay.addEventListener("click",()=>{
-    if(cvv.value.length > 2 && cardDate.value.length >4){
-        payment.style.display = "none"
-    sideImage.style.display = "none"
-    popInfo.style.top = "15%"
-    success.style.display= "block"
-    }
-})
+function myFunction() {
+    gif.style.display = "none"
+    popStart.style.display= "none"
+    success.style.display="flex"
+    secM.style.display="block"
+    secP.style.display="none"
+}
 
-cancel.forEach((canc)=>{
-    canc.addEventListener("click", ()=>{
-        // popNote.style.display =  "block"
-    popInfo.style.display = "none"
-    overlay.style.display= "block"
-})
-})
+
+
+// Execute myFunction after 2000 milliseconds (2 seconds)
+
+// function MoveNormal(){
+//     payment.style.display = "block"
+//     mark1.style.display= "block"
+//     second_circle.style.background= "rgb(22 163 74)"
+//     secondLine.style.background= "rgb(22 163 74)";
+//     gifLoading.style.display = "none"
+// }
+// cancel.forEach((canc)=>{
+//     canc.addEventListener("click", ()=>{
+//         // popNote.style.display =  "block"
+//     popInfo.style.display = "none"
+//     overlay.style.display= "block"
+// })
+// })
 function formatCardNumber(event) {
   let input = event.target;
   let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
@@ -488,5 +570,17 @@ function formatCardExpiration(event) {
   }
 }
 
+
+
+
+function restrictToNumbers(inputElement) {
+    inputElement.addEventListener('input', function(event) {
+        let inputValue = inputElement.value;
+
+        inputValue = inputValue.replace(/\D/g, '');
+
+        inputElement.value = inputValue;
+    });
+}
 </script>
 </html>
